@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Costa Rica Weather</title>
+  <title>Mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,34 +15,33 @@
     <div class="jumbotron text-center">
       <h1>Mission to Mars</h1>
       <p>Scrape the latest news, images and facts about Mars.</p>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></p>
+      <p><a class="btn btn-primary btn-lg" href="http://localhost:5000/scrape" role="button">Scrape New Data!</a></p>
     </div>
     <div class = "container">
       <h2>Latest Mars News</h2>
-      <h3>Today's Headline: {{ mars.news_title }}</h3>
-      <h3>Blurb: {{ mars.news_p }}</h3>
+      <h3>Today's Headline: {{  mars_data.news_title  }}</h3>
+      <h3>Blurb: {{  mars_data.news_p  }}</h3>
+      <!-- <p>{{  mars_data.news_p  }}</p> -->
     </div>
 
     <div class = "container">
       <div class = "row">
         <div class = "col-lg-8 col-md-8 col-sm-12">
           <h4>Featured Mars Image</h4>
-          <img src="{{mars_data.featured_img_url}}" alt="Featured Mars Image">
+          <img src="{{  mars_data.featured_img_url  }}" alt="Featured Mars Image">
         </div>
       </div>
     </div>
 
     <div class = "container">
       <div class = "row">
-        <div class = "col-md-8 col-sm-12">
+    <!-- <div class = "col-md-6">
           <h3>Mars Facts</h3>
-          <img src="{{nasa_df}}" alt="Mars Facts">
-        </div>
-      </div>
-    </div>
-    
-
-    <!-- <div class="col-lg-4.15">
+          <hr>
+          <table border="1" class="striped" style="width:100%"> {{mars_data.html_table}}" alt="Mars Facts">
+    </div> -->
+  
+        <div class="col-md-6">
           <h3>Mars Facts</h3>
           <table border="1" class="dataframe">
             <thead>
@@ -89,23 +88,23 @@
               <td>Egyptian astronomers</td>
             </tr>
           </tbody>
-        </table> -->
+        </table>
     </div>
 
     <div class="col-lg-4.15">
       <div class="my-3 p-4 bg-white shadow-sm border-top border-left border-right border-bottom">
-          <h1 class="viz-head border-gray pb-2 mb-0">Mars Hemispheres</h1>
+          <h2 class="viz-head border-gray pb-2 mb-0">Mars Hemispheres</h2>
             <div class="col-lg-4.15">
-              <a target="_blank" href="htmlhw-bc-visualizations.html">                     
-                <img class="mr-3" src="Resources/assets/images/Fig1.png" alt="" width="150" height="150"> </a>
-              <a target="_blank" href="htmlhw-bc-humidity.html">    
-                <img class="mr-3" src="Resources/assets/images/Fig2.png" alt="" width="150" height="150"></a>
+              <a target="_blank" href="Cerberus Hemisphere Enhanced">   
+                <img class="mr-3" src="https://astrogeology.usgs.gov//cache/images/f5e372a36edfa389625da6d0cc25d905_cerberus_enhanced.tif_full.jpg" alt="" width="150" height="150"> </a>          
+                <a target="_blank" href="Schiaparelli Hemisphere Enhanced">    
+                <img class="mr-3" src="https://astrogeology.usgs.gov/cache/images/3778f7b43bbbc89d6e3cfabb3613ba93_schiaparelli_enhanced.tif_full.jpg" alt="" width="150" height="150"></a>
             </div> 
             <div class="col-lg-4.15">
-              <a target="_blank" href="htmlhw-bc-cloudiness.html">  
-                <img class="mr-3" src="Resources/assets/images/Fig3.png" alt="" width="150" height="150"></a> 
-              <a target="_blank" href="htmlhw-bc-windspeed.html"> 
-                <img class="mr-3" src="Resources/assets/images/Fig4.png" alt="" width="150" height="150"></a>
+              <a target="_blank" href="Syrtis Major Hemisphere Enhanced">  
+                <img class="mr-3" src="https://astrogeology.usgs.gov/cache/images/555e6403a6ddd7ba16ddb0e471cadcf7_syrtis_major_enhanced.tif_full.jpg" alt="" width="150" height="150"></a> 
+              <a target="_blank" href="Valles Marineris Hemisphere Enhanced"> 
+                <img class="mr-3" src="https://astrogeology.usgs.gov/cache/images/b3c7c6c9138f57b4756be9b9c43e3a48_valles_marineris_enhanced.tif_full.jpg" alt="" width="150" height="150"></a>
             </div> 
         </div>
       </div>
