@@ -28,8 +28,8 @@ def scrape():
     browser.visit(mars_url)
 
     #Find full size image after click Full image button
-    browser.click_link_by_partial_text("FULL IMAGE")
-    browser.click_link_by_partial_text("more info")
+    browser.find_link_by_partial_text("FULL IMAGE").click()
+    browser.find_link_by_partial_text("more info").click()
 
     html = browser.html
     soup = bs(html, 'html.parser')
@@ -68,6 +68,8 @@ def scrape():
         imgs_url = img_soup.find("img", class_="wide-image")["src"]
         image_url = baseimg_url+imgs_url
         hemisphere_image_urls.append({"title": title, "img_url": image_url})
+        
+    browser.quit()
 
    # Store data in a dictionary
     mars_data = {
