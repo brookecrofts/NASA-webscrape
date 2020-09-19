@@ -23,14 +23,14 @@ def index():
 # Route that will trigger the scrape function
 @app.route("/scrape")
 def scrape():
-    mars_data = mongo.mars_db.mars_data
+    mars = mongo.db.mars
 
     # Run the scrape function
     mars_data = scrape_mars.scrape()
 
     # Update the Mongo database using update and upsert=True
     # mars_data.replace_one({}, mars_data, upsert=True)
-    mars_data.replace_one({}, mars_data, upsert=True)
+    mars.replace_one({}, mars_data, upsert=True)
 
     # Redirect back to home page
     return "Scraping Updated!"

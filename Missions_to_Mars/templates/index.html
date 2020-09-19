@@ -17,18 +17,15 @@
       <p>Scrape the latest news, images and facts about Mars.</p>
       <p><a class="btn btn-primary btn-lg" href="http://localhost:5000/scrape" role="button">Scrape New Data!</a></p>
     </div>
-    <div class = "container">
       <h2>Latest Mars News</h2>
       <h3>Today's Headline: {{  mars_data.news_title  }}</h3>
       <h4>Blurb: {{  mars_data.news_p  }}</h4>
-      <!-- <p>{{  mars_data.news_p  }}</p> -->
     </div>
-
     <div class = "container">
       <div class = "row">
         <div class = "col-lg-8 col-md-8 col-sm-12">
           <h4>Featured Mars Image</h4>
-          <img src="{{  mars_data.featured_img_url  }}" alt="Featured Mars Image">
+            <img src="https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA17171_hires.jpg" alt="Featured Mars Image">
         </div>
       </div>
     </div>
@@ -96,7 +93,7 @@
           <h2 class="viz-head border-gray pb-2 mb-0">Mars Hemispheres</h2>
             <div class="col-lg-4.15">
               <a target="_blank" href="Cerberus Hemisphere Enhanced">   
-                <img class="mr-3" src="https://astrogeology.usgs.gov//cache/images/f5e372a36edfa389625da6d0cc25d905_cerberus_enhanced.tif_full.jpg" alt="" width="150" height="150"> </a>          
+                <img class="mr-3" src="https://astrogeology.usgs.gov//cache/images/f5e372a36edfa389625da6d0cc25d905_cerberus_enhanced.tif_full.jpg" alt="" width="150" height="150"> </a>      
                 <a target="_blank" href="Schiaparelli Hemisphere Enhanced">    
                 <img class="mr-3" src="https://astrogeology.usgs.gov/cache/images/3778f7b43bbbc89d6e3cfabb3613ba93_schiaparelli_enhanced.tif_full.jpg" alt="" width="150" height="150"></a>
             </div> 
@@ -108,9 +105,11 @@
             </div> 
         </div>
       </div>
-
     </div>
   </div>
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
 </body>
 
 </html>
